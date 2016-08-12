@@ -1,0 +1,17 @@
+{
+  "name": "samplebuild",
+  "version": "1.0.0",
+  "description": "Sample build to show how npm, bower and gulp can work together",
+  "dependencies": {
+    "gulp": "^3.9.1"
+  },
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-util": "^3.0.7"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Stephan Butler",
+  "license": "ISC"
+}
