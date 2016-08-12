@@ -1,14 +1,16 @@
-# Gulp example
+# A minimalistic gulp sample
 
-Minimalistic example of how to use gulp as a web application builder. 
+Minimalistic example of how to use gulp as a web application builder.
 
 ## Getting started
 
 ### Requirements
 
 This sample requires the package manager for javascript to be installed. This
-tool is called 'npm'. In theory it should install with node.
+tool is called 'npm'. In theory it should install with node. Google a bit to find
+out how to install npm for your specific environment.
 
+You will also need git to check out this source code.
 
 ### Check out sources
 Check out this repository using git clone
@@ -23,5 +25,7 @@ npm install
 ```
 
 ### Run gulp
+```sh
 gulp
+```
 
