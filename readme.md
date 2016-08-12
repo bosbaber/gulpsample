@@ -28,4 +28,7 @@ npm install
 ```sh
 gulp
 ```
+If gulp ran successfully then you should find a "dist" folder in your working
+directory containing uglified javascipt. Also note that the html file has the
+bundle.js reference injected.
 
