@@ -1,3 +1,11 @@
+/**
+ * 
+ * A gulp module that helps you to make a distribution build for you web 
+ * application
+ * 
+ * @type Module gulp|Module gulp
+ */
+
 var gulp = require('gulp'),
         sourcemaps = require('gulp-sourcemaps'),
         concat = require('gulp-concat'),
@@ -32,7 +40,7 @@ gulp.task('build-js', ['clean'], function () {
 });
 
 gulp.task('build-index', ['build-js', 'copy-html'], function () {
-    return gulp.src(gulp.paths.tmp + '/**/*.html')
+    return gulp.src(gulp.paths.tmp + '/**/*')
             .pipe(inject(gulp.src(gulp.paths.tmp + '/**/*.js', {read: false}), {relative: true}))
             .pipe(gulp.dest(gulp.paths.dist));
 });
