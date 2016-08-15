@@ -3,7 +3,13 @@
   "version": "1.0.0",
   "description": "Sample build to show how npm, bower and gulp can work together",
   "dependencies": {
+    "del": "^2.2.2",
     "gulp": "^3.9.1",
+    "gulp-concat": "^2.6.0",
+    "gulp-copy": "0.0.2",
+    "gulp-sourcemaps": "^1.6.0",
+    "gulp-uglify": "^2.0.0",
+    "gulp-util": "^3.0.7",
     "require-dir": "^0.3.0"
   },
   "devDependencies": {
