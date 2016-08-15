@@ -3,7 +3,8 @@
   "version": "1.0.0",
   "description": "Sample build to show how npm, bower and gulp can work together",
   "dependencies": {
-    "gulp": "^3.9.1"
+    "gulp": "^3.9.1",
+    "require-dir": "^0.3.0"
   },
   "devDependencies": {
     "gulp": "^3.9.1",
