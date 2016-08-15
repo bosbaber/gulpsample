@@ -4,7 +4,7 @@ var gulp = require('gulp'),
         del = require('del'),
         gutil = require('gulp-util'),
         uglify = require('gulp-uglify'),
-        inject = require('gulp-simple-inject'),
+        inject = require('gulp-inject'),
         copy = require('gulp-copy');
 
 
@@ -15,7 +15,7 @@ gulp.task('clean', function () {
     return del([gulp.paths.dist + '/']);
 });
 
-gulp.task('copy-html',function(){
+gulp.task('copy-html', function () {
     return gulp.src(gulp.paths.src + '/**.html')
             .pipe(gulp.dest(gulp.paths.tmp));
 });
@@ -27,13 +27,12 @@ gulp.task('build-js', ['clean'], function () {
             .pipe(sourcemaps.init())
             .pipe(concat('bundle.js'))
             .pipe(sourcemaps.write())
-            .pipe(uglify())    
+            .pipe(uglify())
             .pipe(gulp.dest(gulp.paths.tmp));
 });
 
-gulp.task('build-index',['build-js','copy-html'],function(){
-    return gulp.src(gulp.paths.tmp + '/*')
-            .pipe(sourcemaps.init())
-            .pipe(inject({cwd:gulp.paths.dist}))
+gulp.task('build-index', ['build-js', 'copy-html'], function () {
+    return gulp.src(gulp.paths.tmp + '/**/*.html')
+            .pipe(inject(gulp.src(gulp.paths.tmp + '/**/*.js', {read: false}), {relative: true}))
             .pipe(gulp.dest(gulp.paths.dist));
 });
